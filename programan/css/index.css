@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+
+/* 
+	set overflow-y property to prevent scroll bar mess up the whole layout
+*/
+body{
+	margin:0; 
+	padding:0; 
+	overflow-y: hidden; 
+	color:#fff;
+}
+li{list-style-type:none;}
+
+a {
+	text-decoration: none!important;
+	outline: none!important;
+}
+
+/* styled just for clear visual division of each areas */
+.op-section{
+	background: #060e1b;
+	position: relative;
+/*	min-height: 700px;*/
+}
+.second{
+	background-color:#3E3E3E;
+}
+.third{
+	background-color:#34495e;
+}
+.fourth{
+	background-color:#2ecc71;
+}
+.fifth{
+	background-color:#8e44ad;
+}
+.last{
+	background-color:#000000;
+}
+
+
+#radioWrap{ 
+	width:20px;
+	height:180px;
+	position:absolute;
+	right:5%;
+	top:53%;
+	margin-top: -90px;}
+
+#radio{
+	width:100%; height:100%; overflow: hidden;
+}
+
+#radio li{
+	width:20px;
+	height:20px;
+	background-color: rgba(255,255,255, 0.5);
+	text-indent: -10000px;
+	border-radius: 50%;
+	margin-top: 12px;
+	cursor:pointer;}
+#radio li:first-child{margin-top:0;}
+
+/* 
+	set position to absolute(essential).
+	use margin to adjust gaps between LIs because ApplikeOnePage.js uses .outerHeight(true) method
+	to measure the interval gap to which each radio buttons are placed.
+*/
+#radioOn{
+	width:20px;
+	height:20px;
+	margin-bottom:12px;
+	position: absolute;
+	top:0; left:0;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.jianli-left{
+	float: left;
+//	position: absolute;
+	min-width: 500px;
+	min-height:730px;
+	margin-left: 10%;
+}
+
+.jianli-right{
+//	float: left;
+//	position: absolute;
+	min-width: 500px;
+	min-height:730px;
+}
+
+.show-xiangmu{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.show-xiangmu-text{
+	width: 100%;
+//	margin-top: 10%;
+	height: 30%;
+}
+
+.show-xiangmu-text h1{
+	width: 80%;
+	margin: 2.5% auto;
+	height: 52%;
+	font-size: 4em;
+	color: white;
+}
+
+.show-xiangmu-text a{
+	color: white;
+}
+
+.show-xiangmu-text p{
+	text-align: justify;
+	font-size: 22px;
+	line-height: 28px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.show-xiangmu-pic{
+	width: 90%;
+	height: 60%;
+	margin: 30px auto 0 auto;
+}
+
+.show-xiangmu-pic img{
+	margin: 10px;
+}
+
+.third-left{
+	width: 5%;
+	color: white;
+	left: 2%;
+	top: 25%;
+	font-size: 63px;
+    line-height: 88px;
+	z-index: 2;
+	position: absolute;
+}
+
+/*.to-computer{
+	display: none;
+}*/
+
+.jianli-left img,.jianli-right img{
+	width: 610px!important;
+}
+
+.display-none{
+	display: none;
+}
+
+.display-block{
+	display: block!important;
+}
+
+.show-xiangmu-pic img:hover{
+	cursor: pointer;	
+}
+
+#imgBox img{
+	width: 800px!important;
+	display: block;
+	margin: 0 auto;
+	height: auto;
+}
+
+#myModal .modal-dialog{
+	width: 800px;
+	top: 150px;
+}
+
+.demo{padding-top: 2em}
+.our-team{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.our-team img{
+    width: 100%;
+    height: auto;
+}
+.our-team .team-content{
+    width: 100%;
+    background: #3f2b4f;
+    color: #fff;
+    padding: 15px 0 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.our-team:hover .team-content{
+    padding-bottom: 40px;
+}
+.our-team .team-content:before,
+.our-team .team-content:after{
+    content: "";
+    width: 60%;
+    height: 38px;
+    background: #3f2b4f;
+    position: absolute;
+    top: -18px;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+.our-team .team-content:before{
+    left: -3%;
+}
+.our-team .team-content:after{
+    right: -3%;
+    transform: rotate(-15deg);
+}
+.our-team .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 7px 0;
+    position: relative;
+}
+.our-team .title:before,
+.our-team .title:after{
+    content: "";
+    width: 7px;
+    height: 93px;
+    background: #ff5543;
+    position: absolute;
+    top: -78px;
+    z-index: -2;
+    transform: rotate(-74deg);
+}
+.our-team .title:before{
+    left: 32%;
+}
+.our-team .title:after{
+    right: 32%;
+    transform: rotate(74deg);
+}
+.our-team .post{
+    display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+.our-team .social-links{
+    list-style: none;
+    padding: 0 0 15px 0;
+    margin: 0;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social-links{
+    bottom: 0;
+}
+.our-team .social-links li{
+    display: inline-block;
+}
+.our-team .social-links li a{
+    display: block;
+    font-size: 16px;
+    color: #aad6e1;
+    margin-right: 6px;
+    transition: all 0.5s ease 0s;
+}
+.our-team .social-links li:last-child a{
+    margin-right: 0;
+}
+.our-team .social-links li a:hover{
+    color: #ff5543;
+}
+.snow-canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	pointer-events: none;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+    .our-team .team-content:before,
+    .our-team .team-content:after{
+        height: 50px;
+        top: -24px;
+    }
+    .our-team .title:before,
+    .our-team .title:after{
+        top: -85px;
+        height: 102px;
+    }
+    .our-team .title:before{
+        left: 35%;
+    }
+    .our-team .title:after{
+        right: 35%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .our-team .team-content:before,
+    .our-team .team-content:after{
+        height: 75px;
+    }
+    .our-team .team-content:before{
+        transform: rotate(8deg);
+    }
+    .our-team .team-content:after{
+        transform: rotate(-8deg);
+    }
+    .our-team .title:before,
+    .our-team .title:after{
+        width: 10px;
+        top: -78px;
+        height: 102px;
+    }
+    .our-team .title:before{
+        left: 42.5%;
+        transform: rotate(-82deg);
+    }
+    .our-team .title:after{
+        right: 42.5%;
+        transform: rotate(82deg);
+    }
+}
+@media only screen and (max-width: 480px){
+    .our-team .title:before,
+    .our-team .title:after{
+        top: -83px;
+    }
+}
+
+@media (max-width: 600px) {
+	#radioWrap{ 
+		right:9%;
+	}
+	.profile-card-wrap{
+		right: 0;
+		left: auto;
+		width: 81%;
+		bottom: 47px;
+		right:43px;
+		height: 210px;
+	}
+	.profile-card-wrap .link-info {
+	    top: 55%;
+	    right: 53px;
+	    width: 90px;
+	    height: 90px;
+	    margin-top: -52px;
+	    position: absolute;
+	}
+	.profile-card-wrap .content{
+		width: 203px;
+    	padding: 23px;
+	}
+	.jianli-left{
+		margin: 0!important;
+	}
+	.jianli-left img{
+		width: 78%!important;
+	}
+	.third-left{
+		width: 100%;
+		top: 0;
+		font-size: 23px;
+		text-align: center;
+	}
+	.metro{
+		min-width: 0;
+		margin-top: 30%;
+	}
+	.metro li{
+		height: 100px!important;
+	}
+	.metro li i{
+		font-size: 25px;
+    	margin: 10px 0 0;
+	}
+	.metro li span{
+		font-size: 9px;
+	}
+	.show-xiangmu-text h1{
+		height: 20%;
+    	font-size: 3em;
+	}
+	.show-xiangmu-pic img{
+		height: 45px;
+	}
+	.show-xiangmu-pic{
+	    height: 47%;
+	    margin: 174px auto 0 auto;
+	}
+	.show-xiangmu{
+		margin-top: 23%;
+	}
+	.last .container{
+		width: 100%;
+	}
+	.last .container img{
+		position: static;
+		width: 93px;
+	}
+	.to-computer{
+		display: block!important;
+	}		
+}
+
